@@ -15,7 +15,7 @@ db();
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
-const port = 8000;
+const port = process.env.PORT||8080;
 app.listen(port, () => {
   console.log("Server is running", port);
 });
